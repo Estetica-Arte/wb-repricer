@@ -1,0 +1,18 @@
+{
+  "owner": "ваш кабинет / бренд",
+  "marketplace": "Wildberries",
+  "wb_token": "<берётся из .env, переменная WB_TOKEN — сюда не копировать>",
+  "token_note": "Токен в этот файл не копируется. Только .env.",
+  "subject": null,
+  "campaign_start": "2026-11-01",
+  "campaign_end": "2026-12-31",
+  "daily_run_local_time": "07:00",
+  "timezone": "Europe/Moscow",
+  "api": {
+    "orders": "https://statistics-api.wildberries.ru/api/v1/supplier/orders",
+    "stocks_report": "https://seller-analytics-api.wildberries.ru/api/v1/warehouse_remains"
+  },
+  "sheets": {
+    "note": "ID таблиц и имена листов задайте под себя. Колонки скрипты ищут по названию."
+  }
+}

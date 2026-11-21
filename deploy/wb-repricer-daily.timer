@@ -1,0 +1,10 @@
+[Unit]
+Description=WB Repricer daily 07:00 Europe/Moscow
+
+[Timer]
+OnCalendar=*-*-* 04:00:00
+Persistent=true
+Unit=wb-repricer-daily.service
+
+[Install]
+WantedBy=timers.target

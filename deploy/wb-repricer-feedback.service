@@ -1,0 +1,14 @@
+[Unit]
+Description=WB Repricer feedback API
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/wb-repricer
+Environment=WB_REPRICER_ROOT=/opt/wb-repricer
+Environment=TZ=Europe/Moscow
+ExecStart=/usr/bin/python3 /opt/wb-repricer/control/feedback_server.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

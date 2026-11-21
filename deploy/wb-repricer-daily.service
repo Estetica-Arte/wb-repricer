@@ -1,0 +1,9 @@
+[Unit]
+Description=WB Repricer morning run
+After=network.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/wb-repricer
+Environment=TZ=Europe/Moscow
+ExecStart=/opt/wb-repricer/wb-daily-run.sh

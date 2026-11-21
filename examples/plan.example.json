@@ -1,0 +1,93 @@
+{
+  "ctrl": [],
+  "goal_pct": 12.0,
+  "target_pct": 13.4,
+  "cap_from_now": 25.0,
+  "june_orders_day": 238.7,
+  "june_price": 2748,
+  "start": "2026-09-02",
+  "end": "2026-10-15",
+  "floor_pct": 15.0,
+  "yellow_at": 0.55,
+  "red_at": 0.8,
+  "cover_days": null,
+  "subject": "Товары",
+  "exclude": [
+    "EXAMPLE-ART"
+  ],
+  "freeze": {
+    "EXAMPLE-ART": {
+      "until": "2026-09-14",
+      "why": "акция WB"
+    }
+  },
+  "follow_original": true,
+  "follow_down_gap": 5,
+  "loco_min_share": 2.0,
+  "loco_add": [],
+  "loco_remove": [],
+  "loco_keep_promo": [],
+  "loco_exit_mult": 2.0,
+  "loco_exit_min_pp": 2.5,
+  "loco_exit_max_pp": 4.0,
+  "anomaly_days": [
+    "EXAMPLE-ART"
+  ],
+  "_anomaly_note": "01.08.2026 — самозаказы (спасение товара от пожаров на складах), день считать обычным средним",
+  "ctrl_before_frequency": [
+    "EXAMPLE-ART"
+  ],
+  "season_source": "frequency",
+  "season_series": "mkt",
+  "_season_note": "16.09.2026: сезон по частотности запросов WB (market.json → mkt, весь рынок «товарыь»); контрольная группа распущена, прежний состав — ctrl_before_frequency",
+  "rows": [
+    {
+      "a": "EXAMPLE-ART",
+      "anchor": 2459,
+      "src": "июнь",
+      "p": 2510,
+      "now_pct": 2.1,
+      "q14": 10.93,
+      "qjun": 19.23,
+      "stock": 1160,
+      "cover": 27,
+      "tgt_pct": 13.4,
+      "mode": "поднимать",
+      "p_target": 2789
+    }
+  ],
+  "scarce": {
+    "days_source": "auto",
+    "ignore_half": true,
+    "levels": [
+      {
+        "max_days": 30,
+        "step_min": 3.0,
+        "step_max": 4.0,
+        "tgt_plus": 10
+      }
+    ],
+    "_note": "25.09.2026: дефицит – остаток (план-факт, WB + фул Москва) ≤50 дн.: шаг ≥2, цель +5 п.п.; ≤30 дн.: шаг ≥3, цель +10 п.п.; половинный шаг зоны не применяется"
+  },
+  "turnover": {
+    "enabled": true,
+    "days_source": "calc",
+    "zones": [
+      {
+        "max_days": 30,
+        "tgt": 23
+      }
+    ],
+    "over_days": 120,
+    "down_step_pp": 2.0,
+    "down_every_days": 7,
+    "down_min_margin_pct": 12,
+    "scarce_ignore_pause_days": 50,
+    "ad_warn_days": 60,
+    "ad_warn_margin_pct": 5,
+    "_note": "01.10.2026: цель кампании +12% к июню к 15.10.2026; зоны по остатку дней (свой расчёт: WB + фул ÷ заказы за 5 дн.) 23/18/15/10/5 → средневзвешенная по заказам ≈ +12%; >180 дн. без подъёма, >250 дн. снижение по 2 п.п./нед. до цели зоны, не ниже ОП 12% | 30.09.2026: снижение затоваренных с остатка > 120 дн. (было 250) | 30.09.2026: без подъёма с остатка > 120 дн. (было 180)",
+    "no_raise_days": 120
+  },
+  "_goal_note": "30.09.2026: цель +12% к июню к 15.10.2026 (решение владельца), target_pct 11.2 → 13.4",
+  "nostock_total_below": 20
+}

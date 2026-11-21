@@ -1,0 +1,54 @@
+# Секреты и окружение
+.env
+*.pem
+*.key
+
+# Живые данные кампании (не коммитить)
+state.json
+plan.json
+config.json
+prices.json
+discounts.json
+price_history.json
+orders_daily.json
+orders_setup.json
+feedback.json
+comments.json
+recommendations.json
+avail.json
+promos.json
+promo_status.json
+promo_prices.json
+plan_margin.json
+op_margin.json
+market.json
+season.json
+stocks_live.json
+adspend*.json
+limits-history.json
+order_plan.json
+page.html
+page-standalone.html
+*-standalone.html
+
+# Каталоги данных
+backup/
+backups/
+logs/
+log/
+promo-reports/
+__pycache__/
+.venv/
+venv/
+.DS_Store
+*.log
+*.pyc
+*.bak
+*.bak-*
+
+# Разрешены примеры
+!examples/
+!*.example
+!*.example.json
+!.env.example
+!config.example.json
